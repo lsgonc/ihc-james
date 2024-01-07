@@ -2,7 +2,6 @@
 
 import 'package:first_app/pages/home.dart';
 import 'package:flutter/material.dart';
-import 'package:first_app/pages/ola.dart';
 
 class Agradecimento extends StatelessWidget {
   const Agradecimento({super.key});
