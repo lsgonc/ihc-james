@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:first_app/pages/ola.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -37,7 +38,9 @@ class HomePage extends StatelessWidget {
                   )),
                   backgroundColor: MaterialStateProperty.all<Color>(Color.fromRGBO(51, 51, 51, 100)),
                 ),
-                onPressed: () => {null},
+                onPressed: () => {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => Ola()))
+                },
                 child: const Text("Acordar James!",
                   style: TextStyle(color: Colors.white)
                 ))
