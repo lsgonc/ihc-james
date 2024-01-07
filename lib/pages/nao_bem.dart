@@ -25,45 +25,63 @@ class NaoBem extends StatelessWidget {
               clipper: ChatBubbleClipper1(type: BubbleType.sendBubble),
               backGroundColor: Colors.white,
               margin: EdgeInsets.all(50),
+              padding: EdgeInsets.fromLTRB(30, 20, 0, 5),
               child: Container(alignment: Alignment.topLeft, width: 400, child: Column(crossAxisAlignment: CrossAxisAlignment.start,  children: [
                 Text("Percebi que não está se sentindo bem.", textAlign: TextAlign.left, style: TextStyle(height: 2, fontFamily: 'Roboto',  fontSize: 20)),
                 Text("Qual problema te antige?.", textAlign: TextAlign.left, style: TextStyle(height: 2, fontFamily: 'Roboto',  fontSize: 20)), 
-                SizedBox(height: 30),
+                SizedBox(height: 10),
                 Row(children: [
                   ElevatedButton(style: ButtonStyle(
+                    fixedSize: MaterialStateProperty.all<Size>(Size(150,5)),
+                    padding: MaterialStateProperty.all<EdgeInsets>(EdgeInsets.fromLTRB(30, 5, 30, 5)),
                     foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
                     backgroundColor: MaterialStateProperty.all<Color>(Color.fromRGBO(0, 96, 150, 100)),
                     side: MaterialStateProperty.all<BorderSide>(BorderSide(color: Color.fromRGBO(0, 96, 150, 100))),
                   ),onPressed: () => {}, child: Text("Cansaço")),
+                  SizedBox(width: 50),
                   ElevatedButton(style: ButtonStyle(
+                    fixedSize: MaterialStateProperty.all<Size>(Size(150,5)),
+                    padding: MaterialStateProperty.all<EdgeInsets>(EdgeInsets.fromLTRB(30, 5, 30, 5)),
                     foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
                     backgroundColor: MaterialStateProperty.all<Color>(Color.fromRGBO(0, 96, 150, 100)),
                     side: MaterialStateProperty.all<BorderSide>(BorderSide(color: Color.fromRGBO(0, 96, 150, 100))),
                   ),onPressed: () => {}, child: Text("Insônia")),
                 ],),
+                SizedBox(height: 5),
                 Row(children: [
                   ElevatedButton(style: ButtonStyle(
+                    fixedSize: MaterialStateProperty.all<Size>(Size(150,5)),
+                    padding: MaterialStateProperty.all<EdgeInsets>(EdgeInsets.fromLTRB(30, 5, 30, 5)),
                     foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
                     backgroundColor: MaterialStateProperty.all<Color>(Color.fromRGBO(0, 96, 150, 100)),
                     side: MaterialStateProperty.all<BorderSide>(BorderSide(color: Color.fromRGBO(0, 96, 150, 100))),
-                  ),onPressed: () => {}, child: Text("Cansaço")),
+                  ),onPressed: () => {}, child: Text("Ansiedade")),
+                  SizedBox(width: 50),
                   ElevatedButton(style: ButtonStyle(
+                    fixedSize: MaterialStateProperty.all<Size>(Size(150,5)),
+                    padding: MaterialStateProperty.all<EdgeInsets>(EdgeInsets.fromLTRB(30, 5, 30, 5)),
                     foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
                     backgroundColor: MaterialStateProperty.all<Color>(Color.fromRGBO(0, 96, 150, 100)),
                     side: MaterialStateProperty.all<BorderSide>(BorderSide(color: Color.fromRGBO(0, 96, 150, 100))),
-                  ),onPressed: () => {}, child: Text("Insônia")),
+                  ),onPressed: () => {}, child: Text("Estresse")),
                 ],),
+                SizedBox(height: 5),
                 Row(children: [
                   ElevatedButton(style: ButtonStyle(
+                    fixedSize: MaterialStateProperty.all<Size>(Size(150,5)),
+                    padding: MaterialStateProperty.all<EdgeInsets>(EdgeInsets.fromLTRB(14, 5, 14, 5)),
                     foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
                     backgroundColor: MaterialStateProperty.all<Color>(Color.fromRGBO(0, 96, 150, 100)),
                     side: MaterialStateProperty.all<BorderSide>(BorderSide(color: Color.fromRGBO(0, 96, 150, 100))),
-                  ),onPressed: () => {}, child: Text("Cansaço")),
+                  ),onPressed: () => {}, child: Text("Insegurança")),
+                  SizedBox(width: 50),
                   ElevatedButton(style: ButtonStyle(
+                    fixedSize: MaterialStateProperty.all<Size>(Size(150,5)),
+                    padding: MaterialStateProperty.all<EdgeInsets>(EdgeInsets.fromLTRB(14, 5, 14, 5)),
                     foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
                     backgroundColor: MaterialStateProperty.all<Color>(Color.fromRGBO(0, 96, 150, 100)),
                     side: MaterialStateProperty.all<BorderSide>(BorderSide(color: Color.fromRGBO(0, 96, 150, 100))),
-                  ),onPressed: () => {}, child: Text("Insônia")),
+                  ),onPressed: () => {}, child: Text("Já estou melhor!")),
                 ],)        
               ]
               )
