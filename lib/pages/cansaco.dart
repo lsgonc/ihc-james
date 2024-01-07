@@ -68,7 +68,7 @@ class Cansaco extends StatelessWidget {
                   SizedBox(width: 50),
                   ElevatedButton(style: ButtonStyle(
                     fixedSize: MaterialStateProperty.all<Size>(Size(150,5)),
-                    padding: MaterialStateProperty.all<EdgeInsets>(EdgeInsets.fromLTRB(30, 5, 30, 5)),
+                    padding: MaterialStateProperty.all<EdgeInsets>(EdgeInsets.fromLTRB(10, 5, 10, 5)),
                     foregroundColor: MaterialStateProperty.all<Color>(Color.fromRGBO(0, 96, 150, 100)),
                     backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
                     side: MaterialStateProperty.all<BorderSide>(BorderSide(color: Color.fromRGBO(0, 96, 150, 100))),
