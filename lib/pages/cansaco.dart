@@ -1,11 +1,10 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
-import 'package:first_app/pages/cansaco.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_chat_bubble/chat_bubble.dart';
 
-class NaoBem extends StatelessWidget {
-  const NaoBem({super.key});
+class Cansaco extends StatelessWidget {
+  const Cansaco({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -21,16 +20,16 @@ class NaoBem extends StatelessWidget {
             ])),
         child: Row(
           children: [
-            Image.asset("assets/images/Robot_ola.png"),
+            Image.asset("assets/images/Robot_cansaco.png"),
             ChatBubble(
               clipper: ChatBubbleClipper1(type: BubbleType.sendBubble),
               backGroundColor: Colors.white,
               margin: EdgeInsets.all(50),
-              padding: EdgeInsets.fromLTRB(30, 20, 0, 5),
+              padding: EdgeInsets.fromLTRB(20, 20, 0, 5),
               child: Container(alignment: Alignment.topLeft, width: 400, child: Column(crossAxisAlignment: CrossAxisAlignment.start,  children: [
-                Text("Percebi que não está se sentindo bem.", textAlign: TextAlign.left, style: TextStyle(height: 1.5, fontFamily: 'Roboto',  fontSize: 20)),
-                Text("Qual problema te antige?.", textAlign: TextAlign.left, style: TextStyle(height: 1.5, fontFamily: 'Roboto',  fontSize: 20)), 
-                SizedBox(height: 20),
+                Text("Entendo que situações como essa podem ser difíceis. O cansaço deve ser levado a sério!", textAlign: TextAlign.left, style: TextStyle(height: 1.5, fontFamily: 'Roboto',  fontSize: 20)),
+                Text("Você consegue me dizer a causa do problema?", textAlign: TextAlign.left, style: TextStyle(height: 1.5, fontFamily: 'Roboto',  fontSize: 20)), 
+                SizedBox(height: 10),
                 Row(children: [
                   ElevatedButton(style: ButtonStyle(
                     fixedSize: MaterialStateProperty.all<Size>(Size(150,5)),
@@ -38,9 +37,7 @@ class NaoBem extends StatelessWidget {
                     foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
                     backgroundColor: MaterialStateProperty.all<Color>(Color.fromRGBO(0, 96, 150, 100)),
                     side: MaterialStateProperty.all<BorderSide>(BorderSide(color: Color.fromRGBO(0, 96, 150, 100))),
-                  ),onPressed: () => {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => Cansaco()))
-                  }, child: Text("Cansaço")),
+                  ),onPressed: () => {}, child: Text("Estudos")),
                   SizedBox(width: 50),
                   ElevatedButton(style: ButtonStyle(
                     fixedSize: MaterialStateProperty.all<Size>(Size(150,5)),
@@ -48,7 +45,7 @@ class NaoBem extends StatelessWidget {
                     foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
                     backgroundColor: MaterialStateProperty.all<Color>(Color.fromRGBO(0, 96, 150, 100)),
                     side: MaterialStateProperty.all<BorderSide>(BorderSide(color: Color.fromRGBO(0, 96, 150, 100))),
-                  ),onPressed: () => {}, child: Text("Insônia")),
+                  ),onPressed: () => {}, child: Text("Trabalho")),
                 ],),
                 SizedBox(height: 5),
                 Row(children: [
@@ -58,34 +55,16 @@ class NaoBem extends StatelessWidget {
                     foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
                     backgroundColor: MaterialStateProperty.all<Color>(Color.fromRGBO(0, 96, 150, 100)),
                     side: MaterialStateProperty.all<BorderSide>(BorderSide(color: Color.fromRGBO(0, 96, 150, 100))),
-                  ),onPressed: () => {}, child: Text("Ansiedade")),
+                  ),onPressed: () => {}, child: Text("Rotina")),
                   SizedBox(width: 50),
                   ElevatedButton(style: ButtonStyle(
                     fixedSize: MaterialStateProperty.all<Size>(Size(150,5)),
                     padding: MaterialStateProperty.all<EdgeInsets>(EdgeInsets.fromLTRB(30, 5, 30, 5)),
-                    foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
-                    backgroundColor: MaterialStateProperty.all<Color>(Color.fromRGBO(0, 96, 150, 100)),
-                    side: MaterialStateProperty.all<BorderSide>(BorderSide(color: Color.fromRGBO(0, 96, 150, 100))),
-                  ),onPressed: () => {}, child: Text("Estresse")),
-                ],),
-                SizedBox(height: 5),
-                Row(children: [
-                  ElevatedButton(style: ButtonStyle(
-                    fixedSize: MaterialStateProperty.all<Size>(Size(150,5)),
-                    padding: MaterialStateProperty.all<EdgeInsets>(EdgeInsets.fromLTRB(14, 5, 14, 5)),
-                    foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
-                    backgroundColor: MaterialStateProperty.all<Color>(Color.fromRGBO(0, 96, 150, 100)),
-                    side: MaterialStateProperty.all<BorderSide>(BorderSide(color: Color.fromRGBO(0, 96, 150, 100))),
-                  ),onPressed: () => {}, child: Text("Insegurança")),
-                  SizedBox(width: 50),
-                  ElevatedButton(style: ButtonStyle(
-                    fixedSize: MaterialStateProperty.all<Size>(Size(150,5)),
-                    padding: MaterialStateProperty.all<EdgeInsets>(EdgeInsets.fromLTRB(14, 5, 14, 5)),
                     foregroundColor: MaterialStateProperty.all<Color>(Color.fromRGBO(0, 96, 150, 100)),
                     backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
                     side: MaterialStateProperty.all<BorderSide>(BorderSide(color: Color.fromRGBO(0, 96, 150, 100))),
-                  ),onPressed: () => {}, child: Text("Já estou melhor!")),
-                ],)        
+                  ),onPressed: () => {}, child: Text("Estresse")),
+                ],),   
               ]
               )
               ),

@@ -33,7 +33,7 @@ class Ola extends StatelessWidget {
                     style: TextStyle(fontSize: 20, color: Colors.black, fontWeight: FontWeight.w300,fontFamily: 'Roboto'),
                     text: "Irei me apresentar novamente. Meu nome é", 
                     children: <TextSpan>[
-                      TextSpan(text: "James", style: TextStyle(fontWeight: FontWeight.bold)),
+                      TextSpan(text: " James,", style: TextStyle(fontWeight: FontWeight.bold)),
                       TextSpan(text: " sou um robô interativo e estou aqui para conversar com você.")
                     ])),
                   
