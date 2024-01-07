@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:first_app/pages/estudos.dart';
+import 'package:first_app/pages/rotina.dart';
 import 'package:first_app/pages/trabalho.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_chat_bubble/chat_bubble.dart';
@@ -61,7 +62,9 @@ class Cansaco extends StatelessWidget {
                     foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
                     backgroundColor: MaterialStateProperty.all<Color>(Color.fromRGBO(0, 96, 150, 100)),
                     side: MaterialStateProperty.all<BorderSide>(BorderSide(color: Color.fromRGBO(0, 96, 150, 100))),
-                  ),onPressed: () => {}, child: Text("Rotina")),
+                  ),onPressed: () => {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => Rotina()))
+                  }, child: Text("Rotina")),
                   SizedBox(width: 50),
                   ElevatedButton(style: ButtonStyle(
                     fixedSize: MaterialStateProperty.all<Size>(Size(150,5)),
@@ -69,7 +72,7 @@ class Cansaco extends StatelessWidget {
                     foregroundColor: MaterialStateProperty.all<Color>(Color.fromRGBO(0, 96, 150, 100)),
                     backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
                     side: MaterialStateProperty.all<BorderSide>(BorderSide(color: Color.fromRGBO(0, 96, 150, 100))),
-                  ),onPressed: () => {}, child: Text("Estresse")),
+                  ),onPressed: () => {}, child: Text("Já estou melhor!")),
                 ],),   
               ]
               )
