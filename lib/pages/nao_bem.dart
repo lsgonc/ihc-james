@@ -20,17 +20,22 @@ class NaoBem extends StatelessWidget {
               Color.fromRGBO(231, 230, 230, 100)
             ])),
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Image.asset("assets/images/Robot_ola.png"),
             ChatBubble(
-              clipper: ChatBubbleClipper1(type: BubbleType.sendBubble),
+              alignment: Alignment.center,
+              clipper: ChatBubbleClipper1(type: BubbleType.receiverBubble),
               backGroundColor: Colors.white,
-              margin: EdgeInsets.all(50),
-              padding: EdgeInsets.fromLTRB(30, 20, 0, 5),
-              child: Container(alignment: Alignment.topLeft, width: 400, child: Column(crossAxisAlignment: CrossAxisAlignment.start,  children: [
+              padding: EdgeInsets.fromLTRB(30, 0, 0, 30),
+              child: SizedBox(width: 400, height: 300,  child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,  
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
                 Text("Percebi que não está se sentindo bem.", textAlign: TextAlign.left, style: TextStyle(height: 1.5, fontFamily: 'Roboto',  fontSize: 20)),
                 Text("Qual problema te antige?.", textAlign: TextAlign.left, style: TextStyle(height: 1.5, fontFamily: 'Roboto',  fontSize: 20)), 
-                SizedBox(height: 20),
+                SizedBox(height: 30),
                 Row(children: [
                   ElevatedButton(style: ButtonStyle(
                     fixedSize: MaterialStateProperty.all<Size>(Size(150,5)),
@@ -50,7 +55,7 @@ class NaoBem extends StatelessWidget {
                     side: MaterialStateProperty.all<BorderSide>(BorderSide(color: Color.fromRGBO(0, 96, 150, 100))),
                   ),onPressed: () => {}, child: Text("Insônia")),
                 ],),
-                SizedBox(height: 5),
+                SizedBox(height: 30),
                 Row(children: [
                   ElevatedButton(style: ButtonStyle(
                     fixedSize: MaterialStateProperty.all<Size>(Size(150,5)),
@@ -68,7 +73,7 @@ class NaoBem extends StatelessWidget {
                     side: MaterialStateProperty.all<BorderSide>(BorderSide(color: Color.fromRGBO(0, 96, 150, 100))),
                   ),onPressed: () => {}, child: Text("Estresse")),
                 ],),
-                SizedBox(height: 5),
+                SizedBox(height: 30),
                 Row(children: [
                   ElevatedButton(style: ButtonStyle(
                     fixedSize: MaterialStateProperty.all<Size>(Size(150,5)),

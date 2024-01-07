@@ -23,17 +23,23 @@ class Cansaco extends StatelessWidget {
               Color.fromRGBO(231, 230, 230, 100)
             ])),
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Image.asset("assets/images/Robot_cansaco.png"),
             ChatBubble(
-              clipper: ChatBubbleClipper1(type: BubbleType.sendBubble),
+              alignment: Alignment.center,
+              clipper: ChatBubbleClipper1(type: BubbleType.receiverBubble),
               backGroundColor: Colors.white,
-              margin: EdgeInsets.all(50),
-              padding: EdgeInsets.fromLTRB(20, 20, 0, 5),
-              child: Container(alignment: Alignment.topLeft, width: 400, child: Column(crossAxisAlignment: CrossAxisAlignment.start,  children: [
+              padding: EdgeInsets.fromLTRB(30, 0, 0, 30),
+              child: SizedBox(width: 400, height: 300,  child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start, 
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
                 Text("Entendo que situações como essa podem ser difíceis. O cansaço deve ser levado a sério!", textAlign: TextAlign.left, style: TextStyle(height: 1.5, fontFamily: 'Roboto',  fontSize: 20)),
-                Text("Você consegue me dizer a causa do problema?", textAlign: TextAlign.left, style: TextStyle(height: 1.5, fontFamily: 'Roboto',  fontSize: 20)), 
                 SizedBox(height: 10),
+                Text("Você consegue me dizer a causa do problema?", textAlign: TextAlign.left, style: TextStyle(height: 1.5, fontFamily: 'Roboto',  fontSize: 20)), 
+                SizedBox(height: 15),
                 Row(children: [
                   ElevatedButton(style: ButtonStyle(
                     fixedSize: MaterialStateProperty.all<Size>(Size(150,5)),
@@ -55,7 +61,7 @@ class Cansaco extends StatelessWidget {
                     Navigator.push(context, MaterialPageRoute(builder: (context) => Trabalho()))
                   }, child: Text("Trabalho")),
                 ],),
-                SizedBox(height: 5),
+                SizedBox(height: 20),
                 Row(children: [
                   ElevatedButton(style: ButtonStyle(
                     fixedSize: MaterialStateProperty.all<Size>(Size(150,5)),

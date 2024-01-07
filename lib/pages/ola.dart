@@ -20,12 +20,18 @@ class Ola extends StatelessWidget {
               Color.fromRGBO(231, 230, 230, 100)
             ])),
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             ChatBubble(
+              alignment: Alignment.center,
               clipper: ChatBubbleClipper1(type: BubbleType.sendBubble),
               backGroundColor: Colors.white,
-              margin: EdgeInsets.all(50),
-              child: Container(alignment: Alignment.topLeft, width: 400, child: Column(crossAxisAlignment: CrossAxisAlignment.start,  children: [
+              padding: EdgeInsets.fromLTRB(40, 10, 40, 10),
+              child: SizedBox( width: 400, height: 300, child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,  
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
                 Text("Olá, novo amigo!", textAlign: TextAlign.left, style: TextStyle(height: 2, fontFamily: 'Roboto',  fontSize: 24, fontWeight: FontWeight.bold)),
                 RichText(
                   textAlign: TextAlign.left,

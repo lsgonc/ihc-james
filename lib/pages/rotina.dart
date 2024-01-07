@@ -20,19 +20,20 @@ class Rotina extends StatelessWidget {
               Color.fromRGBO(231, 230, 230, 100)
             ])),
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             ChatBubble(
+              alignment: Alignment.center,
               clipper: ChatBubbleClipper1(type: BubbleType.sendBubble),
               backGroundColor: Colors.white,
-              margin: EdgeInsets.all(50),
-              child: Container(alignment: Alignment.topLeft, width: 400, child: Column(crossAxisAlignment: CrossAxisAlignment.start,  children: [
+              child: SizedBox(width: 400, height: 400, child: Column(crossAxisAlignment: CrossAxisAlignment.start,  children: [
                 SizedBox(height: 0),
-                Text("Entendo que uma rotina desafiadora pode ser exaustiva, e quero reconhecer o esforço admirável que você dedica diariamente. Lidar com as demandas da vida cotidiana nem sempre é fácil.",style: TextStyle(height: 1.4, fontFamily: 'Roboto',  fontSize: 15)),
+                Text("Entendo que uma rotina desafiadora pode ser exaustiva, e quero reconhecer o esforço admirável que você dedica diariamente. Lidar com as demandas da vida cotidiana nem sempre é fácil.",style: TextStyle(height: 1.4, fontFamily: 'Roboto',  fontSize: 20)),
                 SizedBox(height: 10),
                 RichText(
                   textAlign: TextAlign.left,
                   text: TextSpan(
-                    style: TextStyle(fontSize: 15, color: Colors.black,fontFamily: 'Roboto'),
+                    style: TextStyle(fontSize: 20, color: Colors.black,fontFamily: 'Roboto'),
                     text: "Tire um momento para ", 
                     children: <TextSpan>[
                       TextSpan(text: "respirar fundo, cuidar de si mesmo", style: TextStyle(color: Color.fromRGBO(0, 96, 150, 100))),
@@ -44,7 +45,7 @@ class Rotina extends StatelessWidget {
                 RichText(
                   textAlign: TextAlign.left,
                   text: TextSpan(
-                    style: TextStyle(fontSize: 15, color: Colors.black,fontFamily: 'Roboto'),
+                    style: TextStyle(fontSize: 20, color: Colors.black,fontFamily: 'Roboto'),
                     text: "Para o momento, que tal uma", 
                     children: <TextSpan>[
                       TextSpan(text: " piada?,", style: TextStyle(color: Color.fromRGBO(0, 96, 150, 100))),

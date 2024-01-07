@@ -11,6 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+        title: "Robô Interativo",
         theme: ThemeData(fontFamily: 'Poppins'),
         debugShowCheckedModeBanner: false,
         home: const HomePage());

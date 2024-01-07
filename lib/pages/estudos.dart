@@ -20,18 +20,23 @@ class Estudos extends StatelessWidget {
               Color.fromRGBO(231, 230, 230, 100)
             ])),
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             ChatBubble(
+              alignment: Alignment.center,
               clipper: ChatBubbleClipper1(type: BubbleType.sendBubble),
               backGroundColor: Colors.white,
               margin: EdgeInsets.all(50),
-              child: Container(alignment: Alignment.topLeft, width: 400, child: Column(crossAxisAlignment: CrossAxisAlignment.start,  children: [
-                Text("Entendo o quanto os estudos podem ser exaustivos e desafiadores, mas quero que saiba o quão admirável é o esforço que você está dedicando a essa jornada. Cada página virada e cada momento de concentração são passos valiosos em direção aos seus objetivos.", textAlign: TextAlign.left, style: TextStyle(height: 1.4, fontFamily: 'Roboto',  fontSize: 15)),
+              child: SizedBox(width: 400, height: 400,  child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,  
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                Text("Entendo o quanto os estudos podem ser exaustivos e desafiadores, mas quero que saiba o quão admirável é o esforço que você está dedicando a essa jornada. Cada página virada e cada momento de concentração são passos valiosos em direção aos seus objetivos.", textAlign: TextAlign.left, style: TextStyle(height: 1.2, fontFamily: 'Roboto',  fontSize: 20)),
                 SizedBox(height: 10),
                 RichText(
                   textAlign: TextAlign.left,
                   text: TextSpan(
-                    style: TextStyle(fontSize: 15, color: Colors.black,fontFamily: 'Roboto'),
+                    style: TextStyle(fontSize: 20, color: Colors.black,fontFamily: 'Roboto'),
                     text: "Lembre-se de que é normal sentir cansaço.", 
                     children: <TextSpan>[
                       TextSpan(text: " Permita-se pausas,", style: TextStyle(color: Color.fromRGBO(0, 96, 150, 100))),
@@ -43,7 +48,7 @@ class Estudos extends StatelessWidget {
                 RichText(
                   textAlign: TextAlign.left,
                   text: TextSpan(
-                    style: TextStyle(fontSize: 15, color: Colors.black,fontFamily: 'Roboto'),
+                    style: TextStyle(fontSize: 20, color: Colors.black,fontFamily: 'Roboto'),
                     text: "Para o momento, que tal uma", 
                     children: <TextSpan>[
                       TextSpan(text: " piada?,", style: TextStyle(color: Color.fromRGBO(0, 96, 150, 100))),
