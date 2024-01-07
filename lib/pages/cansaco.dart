@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:first_app/pages/estudos.dart';
+import 'package:first_app/pages/trabalho.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_chat_bubble/chat_bubble.dart';
 
@@ -48,7 +49,9 @@ class Cansaco extends StatelessWidget {
                     foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
                     backgroundColor: MaterialStateProperty.all<Color>(Color.fromRGBO(0, 96, 150, 100)),
                     side: MaterialStateProperty.all<BorderSide>(BorderSide(color: Color.fromRGBO(0, 96, 150, 100))),
-                  ),onPressed: () => {}, child: Text("Trabalho")),
+                  ),onPressed: () => {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => Trabalho()))
+                  }, child: Text("Trabalho")),
                 ],),
                 SizedBox(height: 5),
                 Row(children: [
