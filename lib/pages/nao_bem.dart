@@ -27,9 +27,9 @@ class NaoBem extends StatelessWidget {
               margin: EdgeInsets.all(50),
               padding: EdgeInsets.fromLTRB(30, 20, 0, 5),
               child: Container(alignment: Alignment.topLeft, width: 400, child: Column(crossAxisAlignment: CrossAxisAlignment.start,  children: [
-                Text("Percebi que não está se sentindo bem.", textAlign: TextAlign.left, style: TextStyle(height: 2, fontFamily: 'Roboto',  fontSize: 20)),
-                Text("Qual problema te antige?.", textAlign: TextAlign.left, style: TextStyle(height: 2, fontFamily: 'Roboto',  fontSize: 20)), 
-                SizedBox(height: 10),
+                Text("Percebi que não está se sentindo bem.", textAlign: TextAlign.left, style: TextStyle(height: 1.5, fontFamily: 'Roboto',  fontSize: 20)),
+                Text("Qual problema te antige?.", textAlign: TextAlign.left, style: TextStyle(height: 1.5, fontFamily: 'Roboto',  fontSize: 20)), 
+                SizedBox(height: 20),
                 Row(children: [
                   ElevatedButton(style: ButtonStyle(
                     fixedSize: MaterialStateProperty.all<Size>(Size(150,5)),
@@ -78,8 +78,8 @@ class NaoBem extends StatelessWidget {
                   ElevatedButton(style: ButtonStyle(
                     fixedSize: MaterialStateProperty.all<Size>(Size(150,5)),
                     padding: MaterialStateProperty.all<EdgeInsets>(EdgeInsets.fromLTRB(14, 5, 14, 5)),
-                    foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
-                    backgroundColor: MaterialStateProperty.all<Color>(Color.fromRGBO(0, 96, 150, 100)),
+                    foregroundColor: MaterialStateProperty.all<Color>(Color.fromRGBO(0, 96, 150, 100)),
+                    backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
                     side: MaterialStateProperty.all<BorderSide>(BorderSide(color: Color.fromRGBO(0, 96, 150, 100))),
                   ),onPressed: () => {}, child: Text("Já estou melhor!")),
                 ],)        
