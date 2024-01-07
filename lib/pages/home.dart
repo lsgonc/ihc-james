@@ -26,7 +26,7 @@ class HomePage extends StatelessWidget {
             Image.asset("assets/images/Robot_5.png"),
             const Text("Bem-vindo!",
               style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold, height: 1.5),
-            ), Padding(padding: EdgeInsets.all(15), child: const Text("Meu nome é James, gostaria de conversar?",
+            ), Padding(padding: EdgeInsets.all(15), child: const Text("Olá nome é James, gostaria de conversar?",
                 textAlign: TextAlign.justify,
                 style: TextStyle(fontSize: 24, fontWeight: FontWeight.normal,height: 1.5))),
             SizedBox(height: 15),
