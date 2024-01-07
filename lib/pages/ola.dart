@@ -25,10 +25,19 @@ class Ola extends StatelessWidget {
               backGroundColor: Colors.white,
               margin: EdgeInsets.all(50),
               child: Container(alignment: Alignment.topLeft, width: 400, child: Column(crossAxisAlignment: CrossAxisAlignment.start,  children: [
-                Text("Olá, novo amigo!", textAlign: TextAlign.left, style: TextStyle(height: 2, fontSize: 24, fontWeight: FontWeight.bold)),
-                Text("Irei me apresentar novamente. Meu nome é James, sou um robô interativo e estou aqui para conversar com você.", textAlign: TextAlign.left, style: TextStyle(fontSize: 18)),
+                Text("Olá, novo amigo!", textAlign: TextAlign.left, style: TextStyle(height: 2, fontFamily: 'Roboto',  fontSize: 24, fontWeight: FontWeight.bold)),
+                RichText(
+                  textAlign: TextAlign.left,
+                  text: TextSpan(
+                    style: TextStyle(fontSize: 20, color: Colors.black, fontWeight: FontWeight.w300,fontFamily: 'Roboto'),
+                    text: "Irei me apresentar novamente. Meu nome é", 
+                    children: <TextSpan>[
+                      TextSpan(text: "James", style: TextStyle(fontWeight: FontWeight.bold)),
+                      TextSpan(text: " sou um robô interativo e estou aqui para conversar com você.")
+                    ])),
+                  
                 SizedBox(height: 20),
-                Text("Como está se sentindo hoje?", style: TextStyle(fontSize: 18),),
+                Text("Como está se sentindo hoje?", style: TextStyle(fontFamily: 'Roboto',fontSize: 20,  fontWeight: FontWeight.w300),),
                 SizedBox(height: 30),
                 Row(children: [
                   ElevatedButton(style: ButtonStyle(
