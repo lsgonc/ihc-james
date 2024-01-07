@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+import 'package:first_app/pages/agradecimento.dart';
 import 'package:first_app/pages/estudos.dart';
 import 'package:first_app/pages/rotina.dart';
 import 'package:first_app/pages/trabalho.dart';
@@ -72,7 +73,9 @@ class Cansaco extends StatelessWidget {
                     foregroundColor: MaterialStateProperty.all<Color>(Color.fromRGBO(0, 96, 150, 100)),
                     backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
                     side: MaterialStateProperty.all<BorderSide>(BorderSide(color: Color.fromRGBO(0, 96, 150, 100))),
-                  ),onPressed: () => {}, child: Text("Já estou melhor!")),
+                  ),onPressed: () => {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => Agradecimento()))
+                  }, child: Text("Já estou melhor!")),
                 ],),   
               ]
               )
