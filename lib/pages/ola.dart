@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+import 'package:first_app/pages/nao_bem.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_chat_bubble/chat_bubble.dart';
 
@@ -50,7 +51,9 @@ class Ola extends StatelessWidget {
                     foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
                     backgroundColor: MaterialStateProperty.all<Color>(Color.fromRGBO(0, 96, 150, 100)),
                     side: MaterialStateProperty.all<BorderSide>(BorderSide(color: Color.fromRGBO(0, 96, 150, 100))),
-                  ),onPressed: () => {}, child: Text("Não estou me sentindo bem")),
+                  ),onPressed: () => {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => NaoBem()))
+                  }, child: Text("Não estou me sentindo bem")),
                 ],)
               ])
               ),
