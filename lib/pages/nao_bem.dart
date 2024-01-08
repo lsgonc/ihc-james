@@ -8,7 +8,7 @@ import 'package:flutter_chat_bubble/chat_bubble.dart';
 class NaoBem extends StatelessWidget {
   const NaoBem({super.key});
 
-  final cansaco = "cansaço";
+  final cansaco = "cansaco";
   final insonia = "insonia";
   final ansiedade = "ansiedade";
   final estresse = "estresse";

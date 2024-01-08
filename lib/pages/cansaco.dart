@@ -41,9 +41,9 @@ class Cansaco extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        if(causaProblema == 'cansaço')
+                        if (causaProblema == 'cansaco')
                           Text(
-                              "Entendo que situações como essa podem ser difíceis. O $causaProblema deve ser levado a sério!",
+                              "Entendo que situações como essa podem ser difíceis. O cansaço deve ser levado a sério!",
                               textAlign: TextAlign.left,
                               style: TextStyle(
                                   height: 1.5,
@@ -65,15 +65,15 @@ class Cansaco extends StatelessWidget {
                                   height: 1.5,
                                   fontFamily: 'Roboto',
                                   fontSize: 20))
-                        else if (causaProblema == "estresse") 
-                        Text(
+                        else if (causaProblema == "estresse")
+                          Text(
                               "Entendo que situações como essa podem ser difíceis. Ninguém gosta de se sentir estressado, não é mesmo?",
                               textAlign: TextAlign.left,
                               style: TextStyle(
                                   height: 1.5,
                                   fontFamily: 'Roboto',
                                   fontSize: 20))
-                        else if(causaProblema == "inseguranca")
+                        else if (causaProblema == "inseguranca")
                           Text(
                               "Entendo que situações como essa podem ser difíceis. Mas não se preocupe, é muto comum se sentir inseguro!",
                               textAlign: TextAlign.left,
@@ -113,7 +113,7 @@ class Cansaco extends StatelessWidget {
                                       Navigator.push(
                                           context,
                                           MaterialPageRoute(
-                                              builder: (context) => Estudos()))
+                                              builder: (context) => Estudos(tipoProblema: causaProblema)))
                                     },
                                 child: Text("Estudos")),
                             SizedBox(width: 50),
