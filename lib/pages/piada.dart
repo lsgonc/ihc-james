@@ -1,17 +1,10 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
-import 'dart:convert';
-
-import 'package:first_app/pages/agradecimento.dart';
-import 'package:first_app/pages/estudos.dart';
-import 'package:first_app/pages/rotina.dart';
 import 'package:first_app/models/piadas_model.dart';
 import 'package:first_app/services/piadas_service.dart';
 import 'package:first_app/pages/trabalho.dart';
-import 'package:first_app/services/piadas_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_chat_bubble/chat_bubble.dart';
-import 'package:http/http.dart' as http;
 
 class Piada extends StatefulWidget {
   const Piada({super.key});
@@ -118,7 +111,8 @@ class _PiadaState extends State<Piada> {
                                 child: Text("Continuar")),
                           ],
                         ),
-                      ])),
+                      ]
+                      )),
             ),
           ],
         ),
