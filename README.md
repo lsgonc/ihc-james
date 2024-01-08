@@ -22,7 +22,7 @@ O Projeto James tem como objetivo criar uma experiência de interação única e
 
 ## Instalação
 
-1. Clone o repositório: `git clone https://github.com/seu-usuario/projeto-james.git`
+1. Clone o repositório: `git clone https://github.com/lsgonc/ihc-james.git`
 2. cd ./projeto
 3. Configure as chaves da API no arquivo `config.xml`.
 4. flutter run
