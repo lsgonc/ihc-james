@@ -82,6 +82,7 @@ flutter:
     - assets/images/Robot_5.png
     - assets/images/Robot_ola.png
     - assets/images/Robot_cansaco.png
+    - assets/images/Robot_feliz.png
 
   fonts:
     - family: Poppins

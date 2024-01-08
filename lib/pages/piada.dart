@@ -39,7 +39,7 @@ class _PiadaState extends State<Piada> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Image.asset("assets/images/Robot_cansaco.png"),
+            Image.asset("assets/images/Robot_feliz.png"),
             ChatBubble(
               alignment: Alignment.center,
               clipper: ChatBubbleClipper1(type: BubbleType.receiverBubble),
