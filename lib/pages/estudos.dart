@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:first_app/pages/nao_bem.dart';
+import 'package:first_app/pages/piada.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_chat_bubble/chat_bubble.dart';
 
@@ -233,7 +234,7 @@ class Estudos extends StatelessWidget {
                                       Navigator.push(
                                           context,
                                           MaterialPageRoute(
-                                              builder: (context) => NaoBem()))
+                                              builder: (context) => Piada()))
                                     },
                                 child: Text("Vamos lá")),
                           ],
