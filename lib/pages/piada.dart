@@ -4,7 +4,6 @@ import 'package:first_app/models/piadas_model.dart';
 import 'package:first_app/pages/agradecimento.dart';
 import 'package:first_app/pages/tecnicas.dart';
 import 'package:first_app/services/piadas_service.dart';
-import 'package:first_app/pages/trabalho.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_chat_bubble/chat_bubble.dart';
 

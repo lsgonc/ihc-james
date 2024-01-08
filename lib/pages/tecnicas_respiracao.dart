@@ -1,14 +1,10 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 import 'package:first_app/pages/agradecimento.dart';
-import 'package:first_app/pages/dicas_estudo.dart';
-import 'package:first_app/pages/tecnicas_relaxamento.dart';
-import 'package:first_app/pages/tecnicas_respiracao.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_chat_bubble/chat_bubble.dart';
 
-
-class Tecnicas extends StatelessWidget {
-  const Tecnicas({super.key});
+class TecnicasRespiracao extends StatelessWidget {
+  const TecnicasRespiracao({super.key});
 
 
   @override
@@ -39,7 +35,7 @@ class Tecnicas extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text("Que tal algumas dicas ou técnicas de respiração e relaxamento?",
+                        Text("Voce escolheu técnicas de respiração!",
                             textAlign: TextAlign.left,
                             style: TextStyle(
                                 height: 1.5,
@@ -66,9 +62,9 @@ class Tecnicas extends StatelessWidget {
                                           Color.fromRGBO(0, 96, 150, 100))),
                             ),
                             onPressed: () => {
-                                  Navigator.push(context, MaterialPageRoute(builder: (context) => DicasEstudos()))
+                                  
                                 },
-                            child: Text("Dicas de estudo")),
+                            child: Text("Abdominal Profunda")),
                         SizedBox(height: 20),
                         ElevatedButton(
                             style: ButtonStyle(
@@ -89,9 +85,9 @@ class Tecnicas extends StatelessWidget {
                                           Color.fromRGBO(0, 96, 150, 100))),
                             ),
                             onPressed: () => {
-                                Navigator.push(context, MaterialPageRoute(builder: (context) => TecnicasRespiracao()))
+                              
                             },
-                            child: Text("Técnicas de Respiração")),
+                            child: Text("Box Breathing")),
                         SizedBox(height: 20),
                         ElevatedButton(
                             style: ButtonStyle(
@@ -112,9 +108,9 @@ class Tecnicas extends StatelessWidget {
                                           Color.fromRGBO(0, 96, 150, 100))),
                             ),
                             onPressed: () => {
-                              Navigator.push(context, MaterialPageRoute(builder: (context) => TecnicasRelaxamento()))
+                             
                             },
-                            child: Text("Técnicas de Relaxamento")),
+                            child: Text("Nadi Shadhana")),
                         SizedBox(height: 20),
                         ElevatedButton(
                             style: ButtonStyle(

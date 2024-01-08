@@ -23,7 +23,7 @@ class Agradecimento extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Image.asset("assets/images/Robot_5.png"),
+            Image.asset("assets/images/Robot_ola.png"),
             const Text("Muito obrigado!",
               style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold, height: 1.5),
             ), Padding(padding: EdgeInsets.all(15), child:  
