@@ -14,12 +14,11 @@ O Projeto James tem como objetivo criar uma experiência de interação única e
 
 ## Requisitos do Sistema
 
-- Dispositivo Android (tablet/celular) com versão X.X ou superior.
-- Dispositivo iOS (iPad/iPhone) com versão Y.Y ou superior.
+- Dispositivo Android (tablet/celular) 
+- Dispositivo iOS (iPad/iPhone) 
 - Dispositivos Linux/Windows
 - Navegadores Web (Google Chrome)
 - Conexão com a Internet para integração com a API.
-- Robô James configurado e conectado à mesma rede.
 
 ## Instalação
 
