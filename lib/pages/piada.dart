@@ -1,6 +1,8 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:first_app/models/piadas_model.dart';
+import 'package:first_app/pages/agradecimento.dart';
+import 'package:first_app/pages/tecnicas.dart';
 import 'package:first_app/services/piadas_service.dart';
 import 'package:first_app/pages/trabalho.dart';
 import 'package:flutter/material.dart';
@@ -37,7 +39,7 @@ class _PiadaState extends State<Piada> {
               alignment: Alignment.center,
               clipper: ChatBubbleClipper1(type: BubbleType.receiverBubble),
               backGroundColor: Colors.white,
-              padding: EdgeInsets.fromLTRB(30, 0, 0, 30),
+              padding: EdgeInsets.fromLTRB(30, 0, 30, 30),
               child: SizedBox(
                   width: 400,
                   height: 300,
@@ -83,7 +85,7 @@ class _PiadaState extends State<Piada> {
                                 ),
                                 onPressed: pegarPiada,
                                 child: Text("Conte outra!")),
-                            SizedBox(width: 50),
+                            SizedBox(width: 100),
                             ElevatedButton(
                                 style: ButtonStyle(
                                   fixedSize: MaterialStateProperty.all<Size>(
@@ -106,11 +108,37 @@ class _PiadaState extends State<Piada> {
                                       Navigator.push(
                                           context,
                                           MaterialPageRoute(
-                                              builder: (context) => Trabalho()))
+                                              builder: (context) => Tecnicas()))
                                     },
                                 child: Text("Continuar")),
                           ],
                         ),
+                        SizedBox(height: 20),
+                        ElevatedButton(
+                                style: ButtonStyle(
+                                  minimumSize: MaterialStateProperty.all<Size>(
+                                      Size.fromHeight(40)),
+                                  padding:
+                                      MaterialStateProperty.all<EdgeInsets>(
+                                          EdgeInsets.fromLTRB(30, 5, 30, 5)),
+                                  foregroundColor:
+                                      MaterialStateProperty.all<Color>(
+                                          Color.fromRGBO(0, 96, 150, 100)),
+                                  backgroundColor:
+                                      MaterialStateProperty.all<Color>(
+                                          Colors.white),
+                                  side: MaterialStateProperty.all<BorderSide>(
+                                      BorderSide(
+                                          color:
+                                              Color.fromRGBO(0, 96, 150, 100))),
+                                ),
+                                onPressed: () => {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) => Agradecimento()))
+                                    },
+                                child: Text("Já esstou me sentindo melhor!")),
                       ]
                       )),
             ),
