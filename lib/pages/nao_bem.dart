@@ -7,7 +7,13 @@ import 'package:flutter_chat_bubble/chat_bubble.dart';
 
 class NaoBem extends StatelessWidget {
   const NaoBem({super.key});
-  
+
+  final cansaco = "cansaço";
+  final insonia = "insonia";
+  final ansiedade = "ansiedade";
+  final estresse = "estresse";
+  final inseguranca = "inseguranca";
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -74,7 +80,7 @@ class NaoBem extends StatelessWidget {
                                       Navigator.push(
                                           context,
                                           MaterialPageRoute(
-                                              builder: (context) => Cansaco()))
+                                              builder: (context) => Cansaco(causaProblema: cansaco,)))
                                     },
                                 child: Text("Cansaço")),
                             SizedBox(width: 50),
@@ -96,7 +102,12 @@ class NaoBem extends StatelessWidget {
                                           color:
                                               Color.fromRGBO(0, 96, 150, 100))),
                                 ),
-                                onPressed: () => {},
+                                onPressed: () => {
+                                  Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) => Cansaco(causaProblema: insonia,)))
+                                },
                                 child: Text("Insônia")),
                           ],
                         ),
@@ -121,7 +132,12 @@ class NaoBem extends StatelessWidget {
                                           color:
                                               Color.fromRGBO(0, 96, 150, 100))),
                                 ),
-                                onPressed: () => {},
+                                onPressed: () => {
+                                  Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) => Cansaco(causaProblema: ansiedade)))
+                                },
                                 child: Text("Ansiedade")),
                             SizedBox(width: 50),
                             ElevatedButton(
@@ -142,7 +158,12 @@ class NaoBem extends StatelessWidget {
                                           color:
                                               Color.fromRGBO(0, 96, 150, 100))),
                                 ),
-                                onPressed: () => {},
+                                onPressed: () => {
+                                  Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) => Cansaco(causaProblema: estresse,)))
+                                },
                                 child: Text("Estresse")),
                           ],
                         ),
@@ -167,7 +188,12 @@ class NaoBem extends StatelessWidget {
                                           color:
                                               Color.fromRGBO(0, 96, 150, 100))),
                                 ),
-                                onPressed: () => {},
+                                onPressed: () => {
+                                  Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) => Cansaco(causaProblema: inseguranca,)))
+                                },
                                 child: Text("Insegurança")),
                             SizedBox(width: 50),
                             ElevatedButton(
