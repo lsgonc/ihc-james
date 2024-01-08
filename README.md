@@ -23,6 +23,6 @@ O Projeto James tem como objetivo criar uma experiência de interação única e
 ## Instalação
 
 1. Clone o repositório: `git clone https://github.com/seu-usuario/projeto-james.git`
-2. Abra o projeto no Flutter.
+2. cd ./projeto
 3. Configure as chaves da API no arquivo `config.xml`.
-4. Compile e instale o aplicativo no tablet ou iPad.
+4. flutter run
