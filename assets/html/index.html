@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://sdk.morphcast.com/mphtools/v1.1/mphtools.js" data-config="cameraPrivacyPopup, compatibilityUI, compatibilityAutoCheck"></script>
+    <script src="https://ai-sdk.morphcast.com/v1.16/ai-sdk.js"></script>
+    <script>
+    CY.loader()
+    .licenseKey("sk61527285d8594703a4b0be26e49110f0cdd358f0fd37")
+    .addModule(CY.modules().FACE_AROUSAL_VALENCE.name, {smoothness: 0.70})
+    .addModule(CY.modules().FACE_EMOTION.name, {smoothness: 0.40})
+    .addModule(CY.modules().FACE_ATTENTION.name, {smoothness: 0.83})
+    .addModule(CY.modules().ALARM_LOW_ATTENTION.name, {timeWindowMs: 5000, initialToleranceMs: 7000, threshold: 0.33})
+    .addModule(CY.modules().FACE_GENDER.name, {smoothness: 0.95, threshold: 0.70})
+    .addModule(CY.modules().DATA_AGGREGATOR.name, {initialWaitMs: 2000, periodMs: 1000})
+    .addModule(CY.modules().FACE_POSITIVITY.name, {smoothness: 0.40, gain: 2, angle: 17})
+    .load()
+    .then(({ start, stop }) => start());
+
+
+    window.addEventListener(CY.modules().EVENT_BARRIER.eventName, (evt) => {
+    console.log('EVENT_BARRIER result', evt.detail);
+    });
+
+    window.addEventListener(CY.modules().DATA_AGGREGATOR.eventName, (evt) => {
+    console.log('DATA_AGGREGATOR result', evt.detail);
+    });
+
+    MphTools.CameraPrivacyPopup.setText({
+    "title": "James precisa utilizar sua câmera!",
+    "description": "This experience is designed to be viewed with your camera on. The next screen will ask your consent to access data from your camera.",
+    "url": ""
+    });
+
+    </script>
+
+</body>
+</html>
