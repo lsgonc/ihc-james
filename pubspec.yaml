@@ -88,7 +88,7 @@ flutter:
     - assets/images/Robot_ola.png
     - assets/images/Robot_cansaco.png
     - assets/images/Robot_feliz.png
-    - assets/html/index.html
+    - assets/images/metodo_pomodoro.png
 
   fonts:
     - family: Poppins
