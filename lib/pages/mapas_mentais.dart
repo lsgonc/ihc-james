@@ -2,8 +2,8 @@ import 'package:first_app/pages/agradecimento.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_chat_bubble/chat_bubble.dart';
 
-class Pomodoro extends StatelessWidget {
-  const Pomodoro({super.key});
+class MapasMentais extends StatelessWidget {
+  const MapasMentais({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -35,19 +35,22 @@ class Pomodoro extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text("Método Pomodoro",textAlign: MediaQuery.of(context).size.width < 750 ? TextAlign.justify : TextAlign.left, style: TextStyle(fontWeight: FontWeight.bold,fontSize: 24),),
+                          Text("Mapas Mentais",textAlign: MediaQuery.of(context).size.width < 750 ? TextAlign.justify : TextAlign.left, style: TextStyle(fontWeight: FontWeight.bold,fontSize: 24),),
                         ],
                       ),
                       SizedBox(height: 20),
                       Text.rich(TextSpan(
                         children: <TextSpan>[
-                          TextSpan(text: "Divida seu tempo de estudo ", style: TextStyle(fontSize: 20,color: Color.fromRGBO(55, 123, 255, 100))),
-                          TextSpan(text: "em intervalos curtos, geralmente de 25 minutos, seguidos por uma pausa de 5 minutos.", style: TextStyle(fontSize: 20)),
+                          TextSpan(text: "Comece com um ", style: TextStyle(fontSize: 20)),
+                          TextSpan(text: "conceito central", style: TextStyle(fontSize: 20,color: Color.fromRGBO(55, 123, 255, 100))),
+                          TextSpan(text: " e ", style: TextStyle(fontSize: 20)),
+                          TextSpan(text: "ramifique em tópicos relacionados", style: TextStyle(fontSize: 20,color: Color.fromRGBO(55, 123, 255, 100))),
+                          TextSpan(text: " conectando ideias através de linhas.", style: TextStyle(fontSize: 20)),
                         ]
                       )),
                       SizedBox(height: 30,),
                       Text(
-                        "Após completar quatro ciclos Pomodoro, faça uma pausa mais longa, de 15-30 minutos.", 
+                        "Esse método facilita a revisão e a compreensão de relações entre diferentes conceitos.", 
                         style: TextStyle(fontSize: 20),),
                       SizedBox(height: 30,),
                       Row(
@@ -59,7 +62,7 @@ class Pomodoro extends StatelessWidget {
                             side: MaterialStateProperty.all<BorderSide>(BorderSide(color: Color.fromRGBO(0, 96, 150, 100))),
                           ),onPressed: () => {
                             Navigator.push(context, MaterialPageRoute(builder: (context) => Agradecimento()))
-                          }, child: Text("Estou melhor, obrigado!")),
+                          }, child: Text("Estou melhor, obrigado")),
                         ],
                       ),
                     ],

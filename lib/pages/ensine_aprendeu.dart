@@ -2,8 +2,8 @@ import 'package:first_app/pages/agradecimento.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_chat_bubble/chat_bubble.dart';
 
-class Pomodoro extends StatelessWidget {
-  const Pomodoro({super.key});
+class EnsineAprendeu extends StatelessWidget {
+  const EnsineAprendeu({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -35,20 +35,22 @@ class Pomodoro extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text("Método Pomodoro",textAlign: MediaQuery.of(context).size.width < 750 ? TextAlign.justify : TextAlign.left, style: TextStyle(fontWeight: FontWeight.bold,fontSize: 24),),
+                          Text("Ensine o que aprendeu",textAlign: MediaQuery.of(context).size.width < 750 ? TextAlign.justify : TextAlign.left, style: TextStyle(fontWeight: FontWeight.bold,fontSize: 24),),
                         ],
                       ),
                       SizedBox(height: 20),
+                      Text(
+                        "Após estudar um tópico, tente ensiná-lo a alguém, mesmo que seja para um amigo imaginário ou por escrito.", 
+                        style: TextStyle(fontSize: 20),),
                       Text.rich(TextSpan(
                         children: <TextSpan>[
-                          TextSpan(text: "Divida seu tempo de estudo ", style: TextStyle(fontSize: 20,color: Color.fromRGBO(55, 123, 255, 100))),
-                          TextSpan(text: "em intervalos curtos, geralmente de 25 minutos, seguidos por uma pausa de 5 minutos.", style: TextStyle(fontSize: 20)),
+                          TextSpan(text: "Ensinar o que aprendeu ", style: TextStyle(fontSize: 20)),
+                          TextSpan(text: "reforça seu próprio entendimento", style: TextStyle(fontSize: 20,color: Color.fromRGBO(55, 123, 255, 100))),
+                          TextSpan(text: " e ", style: TextStyle(fontSize: 20)),
+                          TextSpan(text: "destaca áreas que ainda precisam de revisão.", style: TextStyle(fontSize: 20,color: Color.fromRGBO(55, 123, 255, 100))),
                         ]
                       )),
-                      SizedBox(height: 30,),
-                      Text(
-                        "Após completar quatro ciclos Pomodoro, faça uma pausa mais longa, de 15-30 minutos.", 
-                        style: TextStyle(fontSize: 20),),
+                      
                       SizedBox(height: 30,),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.end,

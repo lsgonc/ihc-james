@@ -1,4 +1,6 @@
+import 'package:first_app/pages/ensine_aprendeu.dart';
 import 'package:first_app/pages/home.dart';
+import 'package:first_app/pages/mapas_mentais.dart';
 import 'package:first_app/pages/pomodoro.dart';
 import 'package:first_app/pages/reconhecimentofacial.dart';
 import 'package:flutter/material.dart';
@@ -22,6 +24,6 @@ class MyApp extends StatelessWidget {
         title: "Robô Interativo",
         theme: ThemeData(fontFamily: 'Poppins'),
         debugShowCheckedModeBanner: false,
-        home: Pomodoro());
+        home: EnsineAprendeu());
   }
 }
