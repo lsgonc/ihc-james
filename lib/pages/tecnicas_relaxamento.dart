@@ -1,5 +1,8 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 import 'package:first_app/pages/agradecimento.dart';
+import 'package:first_app/pages/escrita_terapeutica.dart';
+import 'package:first_app/pages/meditacao_mindfullness.dart';
+import 'package:first_app/pages/vizualizacao_guiada.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_chat_bubble/chat_bubble.dart';
 
@@ -62,7 +65,7 @@ class TecnicasRelaxamento extends StatelessWidget {
                                           Color.fromRGBO(0, 96, 150, 100))),
                             ),
                             onPressed: () => {
-                                  
+                                  Navigator.push(context, MaterialPageRoute(builder: (context) => VizualizacaoGuiada()))
                                 },
                             child: Text("Visualização Guiada")),
                         SizedBox(height: 20),
@@ -85,7 +88,7 @@ class TecnicasRelaxamento extends StatelessWidget {
                                           Color.fromRGBO(0, 96, 150, 100))),
                             ),
                             onPressed: () => {
-                              
+                              Navigator.push(context, MaterialPageRoute(builder: (context) => MeditacaoMindfulness()))
                             },
                             child: Text("Meditação Mindfulness")),
                         SizedBox(height: 20),
@@ -108,7 +111,7 @@ class TecnicasRelaxamento extends StatelessWidget {
                                           Color.fromRGBO(0, 96, 150, 100))),
                             ),
                             onPressed: () => {
-                             
+                             Navigator.push(context, MaterialPageRoute(builder: (context) => EscritaTerapeutica()))
                             },
                             child: Text("Escrita terapêutica")),
                         SizedBox(height: 20),

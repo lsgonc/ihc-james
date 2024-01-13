@@ -1,5 +1,8 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 import 'package:first_app/pages/agradecimento.dart';
+import 'package:first_app/pages/ensine_aprendeu.dart';
+import 'package:first_app/pages/mapas_mentais.dart';
+import 'package:first_app/pages/pomodoro.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_chat_bubble/chat_bubble.dart';
 
@@ -62,7 +65,7 @@ class DicasEstudos extends StatelessWidget {
                                           Color.fromRGBO(0, 96, 150, 100))),
                             ),
                             onPressed: () => {
-                                  
+                                  Navigator.push(context, MaterialPageRoute(builder: (context) => Pomodoro()))
                                 },
                             child: Text("Método Pomodoro")),
                         SizedBox(height: 20),
@@ -85,7 +88,7 @@ class DicasEstudos extends StatelessWidget {
                                           Color.fromRGBO(0, 96, 150, 100))),
                             ),
                             onPressed: () => {
-                              
+                              Navigator.push(context, MaterialPageRoute(builder: (context) => MapasMentais()))
                             },
                             child: Text("Mapas Mentais")),
                         SizedBox(height: 20),
@@ -108,7 +111,7 @@ class DicasEstudos extends StatelessWidget {
                                           Color.fromRGBO(0, 96, 150, 100))),
                             ),
                             onPressed: () => {
-                             
+                             Navigator.push(context, MaterialPageRoute(builder: (context) => EnsineAprendeu()))
                             },
                             child: Text("Ensine o que Aprendeu")),
                         SizedBox(height: 20),

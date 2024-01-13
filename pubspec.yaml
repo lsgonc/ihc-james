@@ -89,6 +89,8 @@ flutter:
     - assets/images/Robot_cansaco.png
     - assets/images/Robot_feliz.png
     - assets/images/metodo_pomodoro.png
+    - assets/images/tecnicas_respiracao.png
+    - assets/images/tecnicas_relaxamento.png
 
   fonts:
     - family: Poppins

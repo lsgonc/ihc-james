@@ -1,5 +1,8 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+import 'package:first_app/pages/abdominal_profundo.dart';
 import 'package:first_app/pages/agradecimento.dart';
+import 'package:first_app/pages/box_breathing.dart';
+import 'package:first_app/pages/nadi_shodhana.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_chat_bubble/chat_bubble.dart';
 
@@ -62,7 +65,7 @@ class TecnicasRespiracao extends StatelessWidget {
                                           Color.fromRGBO(0, 96, 150, 100))),
                             ),
                             onPressed: () => {
-                                  
+                                  Navigator.push(context, MaterialPageRoute(builder: (context) => AbdominalProfundo()))
                                 },
                             child: Text("Abdominal Profunda")),
                         SizedBox(height: 20),
@@ -85,7 +88,7 @@ class TecnicasRespiracao extends StatelessWidget {
                                           Color.fromRGBO(0, 96, 150, 100))),
                             ),
                             onPressed: () => {
-                              
+                              Navigator.push(context, MaterialPageRoute(builder: (context) => BoxBreathing()))
                             },
                             child: Text("Box Breathing")),
                         SizedBox(height: 20),
@@ -108,7 +111,7 @@ class TecnicasRespiracao extends StatelessWidget {
                                           Color.fromRGBO(0, 96, 150, 100))),
                             ),
                             onPressed: () => {
-                             
+                             Navigator.push(context, MaterialPageRoute(builder: (context) => NadiShodhana()))
                             },
                             child: Text("Nadi Shadhana")),
                         SizedBox(height: 20),
