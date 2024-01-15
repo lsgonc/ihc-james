@@ -13,10 +13,10 @@ import 'package:flutter/material.dart';
 import 'package:permission_handler/permission_handler.dart';
 
 void main() async {
-  // WidgetsFlutterBinding.ensureInitialized();
+  WidgetsFlutterBinding.ensureInitialized();
 
-  // await Permission.camera.request();
-  // await Permission.microphone.request();
+  await Permission.camera.request();
+  await Permission.microphone.request();
 
   runApp(const MyApp());
 }
@@ -30,6 +30,6 @@ class MyApp extends StatelessWidget {
         title: "Robô Interativo",
         theme: ThemeData(fontFamily: 'Poppins'),
         debugShowCheckedModeBanner: false,
-        home: HomePage());
+        home: Reconhecimento());
   }
 }

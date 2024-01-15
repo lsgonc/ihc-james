@@ -1,8 +1,11 @@
+import 'dart:convert';
+
+import 'package:first_app/pages/ola.dart';
+import 'package:first_app/pages/piada.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:url_launcher/url_launcher.dart';
-
 
 class Reconhecimento extends StatefulWidget {
   const Reconhecimento({super.key});
@@ -72,11 +75,30 @@ class _ReconhecimentoState extends State<Reconhecimento> {
               children: [
                 InAppWebView(
                   key: webViewKey,
-                  initialUrlRequest:
-                      URLRequest(url: WebUri("https://morphcast-api.onrender.com/")),
+                  initialUrlRequest: URLRequest(
+                      url: WebUri("https://morphcast-api.onrender.com/")),
                   initialSettings: settings,
                   pullToRefreshController: pullToRefreshController,
                   onWebViewCreated: (controller) {
+                    controller.addJavaScriptHandler(
+                        handlerName: "emotionChannel",
+                        callback: (args) {
+                          String message = args.join();
+                          if (message == "Angry" ||
+                              message == "Disgust" ||
+                              message == "Fear" ||
+                              message == "Sad") {
+                            controller.dispose();
+                            Navigator.push(context,
+                                MaterialPageRoute(builder: (context) => Ola()));
+                          } else {
+                            controller.dispose();
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => Piada()));
+                          }
+                        });
                     webViewController = controller;
                   },
                   onLoadStart: (controller, url) {
