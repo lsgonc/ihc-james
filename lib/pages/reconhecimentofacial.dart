@@ -4,6 +4,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:permission_handler/permission_handler.dart';
 
 class Reconhecimento extends StatefulWidget {
   const Reconhecimento({super.key});
@@ -86,12 +87,12 @@ class _ReconhecimentoState extends State<Reconhecimento> {
                               message == "Disgust" ||
                               message == "Fear" ||
                               message == "Sad") {
-                            controller.dispose();
-                            Navigator.push(context,
-                                MaterialPageRoute(builder: (context) => const Ola()));
+                            Navigator.pushReplacement(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const Ola()));
                           } else {
-                            controller.dispose();
-                            Navigator.push(
+                            Navigator.pushReplacement(
                                 context,
                                 MaterialPageRoute(
                                     builder: (context) => const Piada()));
@@ -106,10 +107,38 @@ class _ReconhecimentoState extends State<Reconhecimento> {
                     });
                   },
                   onPermissionRequest: (controller, request) async {
-                    return PermissionResponse(
-                        resources: request.resources,
-                        action: PermissionResponseAction.GRANT);
-                  },
+                final resources = <PermissionResourceType>[];
+                if (request.resources.contains(PermissionResourceType.CAMERA)) {
+                  final cameraStatus = await Permission.camera.request();
+                  if (!cameraStatus.isDenied) {
+                    resources.add(PermissionResourceType.CAMERA);
+                  }
+                }
+                if (request.resources
+                    .contains(PermissionResourceType.MICROPHONE)) {
+                  final microphoneStatus =
+                      await Permission.microphone.request();
+                  if (!microphoneStatus.isDenied) {
+                    resources.add(PermissionResourceType.MICROPHONE);
+                  }
+                }
+                // only for iOS and macOS
+                if (request.resources
+                    .contains(PermissionResourceType.CAMERA_AND_MICROPHONE)) {
+                  final cameraStatus = await Permission.camera.request();
+                  final microphoneStatus =
+                      await Permission.microphone.request();
+                  if (!cameraStatus.isDenied && !microphoneStatus.isDenied) {
+                    resources.add(PermissionResourceType.CAMERA_AND_MICROPHONE);
+                  }
+                }
+
+                return PermissionResponse(
+                    resources: resources,
+                    action: resources.isEmpty
+                        ? PermissionResponseAction.DENY
+                        : PermissionResponseAction.GRANT);
+              },
                   shouldOverrideUrlLoading:
                       (controller, navigationAction) async {
                     var uri = navigationAction.request.url!;

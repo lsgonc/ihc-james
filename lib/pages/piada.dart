@@ -15,8 +15,8 @@ class Piada extends StatefulWidget {
 }
 
 @override
-void initState() {
-  getPiadas();
+void initState () async {
+  await getPiadas();
 }
 
 class _PiadaState extends State<Piada> {
