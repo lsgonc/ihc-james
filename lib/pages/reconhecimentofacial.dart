@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 import 'package:first_app/pages/ola.dart';
 import 'package:first_app/pages/piada.dart';
 import 'package:flutter/foundation.dart';
@@ -90,13 +88,13 @@ class _ReconhecimentoState extends State<Reconhecimento> {
                               message == "Sad") {
                             controller.dispose();
                             Navigator.push(context,
-                                MaterialPageRoute(builder: (context) => Ola()));
+                                MaterialPageRoute(builder: (context) => const Ola()));
                           } else {
                             controller.dispose();
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => Piada()));
+                                    builder: (context) => const Piada()));
                           }
                         });
                     webViewController = controller;

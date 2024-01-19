@@ -14,7 +14,10 @@ class Piada extends StatefulWidget {
   State<Piada> createState() => _PiadaState();
 }
 
-//opa
+@override
+void initState() {
+  getPiadas();
+}
 
 class _PiadaState extends State<Piada> {
   PiadasModel? piada;
@@ -55,14 +58,20 @@ class _PiadaState extends State<Piada> {
                                 fontFamily: 'Roboto',
                                 fontSize: 20)),
                         SizedBox(height: 15),
-                        piada != null ? Text("\"${piada!.setup}\"", style: TextStyle(
-                                height: 1.5,
-                                fontFamily: 'Roboto',
-                                fontSize: 20)) : Text(""),
-                        piada != null ? Text(piada!.delivery, style: TextStyle(
-                                height: 1.5,
-                                fontFamily: 'Roboto',
-                                fontSize: 20)) : Text(""),
+                        piada != null
+                            ? Text("\"${piada!.setup}\"",
+                                style: TextStyle(
+                                    height: 1.5,
+                                    fontFamily: 'Roboto',
+                                    fontSize: 20))
+                            : Text(""),
+                        piada != null
+                            ? Text(piada!.delivery,
+                                style: TextStyle(
+                                    height: 1.5,
+                                    fontFamily: 'Roboto',
+                                    fontSize: 20))
+                            : Text(""),
                         SizedBox(height: 20),
                         Row(
                           children: [
@@ -116,32 +125,28 @@ class _PiadaState extends State<Piada> {
                         ),
                         SizedBox(height: 20),
                         ElevatedButton(
-                                style: ButtonStyle(
-                                  minimumSize: MaterialStateProperty.all<Size>(
-                                      Size.fromHeight(40)),
-                                  padding:
-                                      MaterialStateProperty.all<EdgeInsets>(
-                                          EdgeInsets.fromLTRB(30, 5, 30, 5)),
-                                  foregroundColor:
-                                      MaterialStateProperty.all<Color>(
-                                          Color.fromRGBO(0, 96, 150, 100)),
-                                  backgroundColor:
-                                      MaterialStateProperty.all<Color>(
-                                          Colors.white),
-                                  side: MaterialStateProperty.all<BorderSide>(
-                                      BorderSide(
-                                          color:
-                                              Color.fromRGBO(0, 96, 150, 100))),
-                                ),
-                                onPressed: () => {
-                                      Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                              builder: (context) => Agradecimento()))
-                                    },
-                                child: Text("Já esstou me sentindo melhor!")),
-                      ]
-                      )),
+                            style: ButtonStyle(
+                              minimumSize: MaterialStateProperty.all<Size>(
+                                  Size.fromHeight(40)),
+                              padding: MaterialStateProperty.all<EdgeInsets>(
+                                  EdgeInsets.fromLTRB(30, 5, 30, 5)),
+                              foregroundColor: MaterialStateProperty.all<Color>(
+                                  Color.fromRGBO(0, 96, 150, 100)),
+                              backgroundColor: MaterialStateProperty.all<Color>(
+                                  Colors.white),
+                              side: MaterialStateProperty.all<BorderSide>(
+                                  BorderSide(
+                                      color: Color.fromRGBO(0, 96, 150, 100))),
+                            ),
+                            onPressed: () => {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              Agradecimento()))
+                                },
+                            child: Text("Já esstou me sentindo melhor!")),
+                      ])),
             ),
           ],
         ),

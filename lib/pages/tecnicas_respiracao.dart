@@ -1,4 +1,3 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 import 'package:first_app/pages/abdominal_profundo.dart';
 import 'package:first_app/pages/agradecimento.dart';
 import 'package:first_app/pages/box_breathing.dart';
@@ -30,7 +29,7 @@ class TecnicasRespiracao extends StatelessWidget {
               alignment: Alignment.center,
               clipper: ChatBubbleClipper1(type: BubbleType.sendBubble),
               backGroundColor: Colors.white,
-              padding: EdgeInsets.fromLTRB(30, 0, 30, 30),
+              padding: const EdgeInsets.fromLTRB(30, 0, 30, 30),
               child: SizedBox(
                   width: 400,
                   height: 300,
@@ -38,105 +37,105 @@ class TecnicasRespiracao extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text("Voce escolheu técnicas de respiração!",
+                        const Text("Voce escolheu técnicas de respiração!",
                             textAlign: TextAlign.left,
                             style: TextStyle(
                                 height: 1.5,
                                 fontFamily: 'Roboto',
                                 fontSize: 20)),
 
-                        SizedBox(height: 30),
+                        const SizedBox(height: 30),
                         ElevatedButton(
                             style: ButtonStyle(
                               minimumSize: MaterialStateProperty.all<Size>(
-                                  Size.fromHeight(40)),
+                                  const Size.fromHeight(40)),
                               padding:
                                   MaterialStateProperty.all<EdgeInsets>(
-                                      EdgeInsets.fromLTRB(30, 5, 30, 5)),
+                                      const EdgeInsets.fromLTRB(30, 5, 30, 5)),
                               foregroundColor:
                                   MaterialStateProperty.all<Color>(
                                       Colors.white),
                               backgroundColor:
                                   MaterialStateProperty.all<Color>(
-                                      Color.fromRGBO(0, 96, 150, 100)),
+                                      const Color.fromRGBO(0, 96, 150, 100)),
                               side: MaterialStateProperty.all<BorderSide>(
-                                  BorderSide(
+                                  const BorderSide(
                                       color:
                                           Color.fromRGBO(0, 96, 150, 100))),
                             ),
                             onPressed: () => {
-                                  Navigator.push(context, MaterialPageRoute(builder: (context) => AbdominalProfundo()))
+                                  Navigator.push(context, MaterialPageRoute(builder: (context) => const AbdominalProfundo()))
                                 },
-                            child: Text("Abdominal Profunda")),
-                        SizedBox(height: 20),
+                            child: const Text("Abdominal Profunda")),
+                        const SizedBox(height: 20),
                         ElevatedButton(
                             style: ButtonStyle(
                               minimumSize: MaterialStateProperty.all<Size>(
-                                  Size.fromHeight(40)),
+                                  const Size.fromHeight(40)),
                               padding:
                                   MaterialStateProperty.all<EdgeInsets>(
-                                      EdgeInsets.fromLTRB(30, 5, 30, 5)),
+                                      const EdgeInsets.fromLTRB(30, 5, 30, 5)),
                               foregroundColor:
                                   MaterialStateProperty.all<Color>(
                                       Colors.white),
                               backgroundColor:
                                   MaterialStateProperty.all<Color>(
-                                      Color.fromRGBO(0, 96, 150, 100)),
+                                      const Color.fromRGBO(0, 96, 150, 100)),
                               side: MaterialStateProperty.all<BorderSide>(
-                                  BorderSide(
+                                  const BorderSide(
                                       color:
                                           Color.fromRGBO(0, 96, 150, 100))),
                             ),
                             onPressed: () => {
-                              Navigator.push(context, MaterialPageRoute(builder: (context) => BoxBreathing()))
+                              Navigator.push(context, MaterialPageRoute(builder: (context) => const BoxBreathing()))
                             },
-                            child: Text("Box Breathing")),
-                        SizedBox(height: 20),
+                            child: const Text("Box Breathing")),
+                        const SizedBox(height: 20),
                         ElevatedButton(
                             style: ButtonStyle(
                               minimumSize: MaterialStateProperty.all<Size>(
-                                  Size.fromHeight(40)),
+                                  const Size.fromHeight(40)),
                               padding:
                                   MaterialStateProperty.all<EdgeInsets>(
-                                      EdgeInsets.fromLTRB(30, 5, 30, 5)),
+                                      const EdgeInsets.fromLTRB(30, 5, 30, 5)),
                               foregroundColor:
                                   MaterialStateProperty.all<Color>(
                                       Colors.white),
                               backgroundColor:
                                   MaterialStateProperty.all<Color>(
-                                      Color.fromRGBO(0, 96, 150, 100)),
+                                      const Color.fromRGBO(0, 96, 150, 100)),
                               side: MaterialStateProperty.all<BorderSide>(
-                                  BorderSide(
+                                  const BorderSide(
                                       color:
                                           Color.fromRGBO(0, 96, 150, 100))),
                             ),
                             onPressed: () => {
-                             Navigator.push(context, MaterialPageRoute(builder: (context) => NadiShodhana()))
+                             Navigator.push(context, MaterialPageRoute(builder: (context) => const NadiShodhana()))
                             },
-                            child: Text("Nadi Shadhana")),
-                        SizedBox(height: 20),
+                            child: const Text("Nadi Shadhana")),
+                        const SizedBox(height: 20),
                         ElevatedButton(
                             style: ButtonStyle(
                               minimumSize: MaterialStateProperty.all<Size>(
-                                  Size.fromHeight(40)),
+                                  const Size.fromHeight(40)),
                               padding:
                                   MaterialStateProperty.all<EdgeInsets>(
-                                      EdgeInsets.fromLTRB(30, 5, 30, 5)),
+                                      const EdgeInsets.fromLTRB(30, 5, 30, 5)),
                               foregroundColor:
                                   MaterialStateProperty.all<Color>(
-                                      Color.fromRGBO(0, 96, 150, 100)),
+                                      const Color.fromRGBO(0, 96, 150, 100)),
                               backgroundColor:
                                   MaterialStateProperty.all<Color>(
                                       Colors.white),
                               side: MaterialStateProperty.all<BorderSide>(
-                                  BorderSide(
+                                  const BorderSide(
                                       color:
                                           Color.fromRGBO(0, 96, 150, 100))),
                             ),
                             onPressed: () => {
-                                Navigator.push(context, MaterialPageRoute(builder: (context) => Agradecimento()))
+                                Navigator.push(context, MaterialPageRoute(builder: (context) => const Agradecimento()))
                             },
-                            child: Text("Já estou me sentindo melhor, obrigado!")),
+                            child: const Text("Já estou me sentindo melhor, obrigado!")),
                       ])),
             ),
             Image.asset("assets/images/Robot_ola.png")

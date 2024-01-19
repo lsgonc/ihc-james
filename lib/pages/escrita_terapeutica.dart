@@ -9,7 +9,7 @@ class EscritaTerapeutica extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-            padding: EdgeInsets.fromLTRB(0, 30, 0, 0),
+            padding: const EdgeInsets.fromLTRB(0, 30, 0, 0),
             decoration: const BoxDecoration(
                 gradient: LinearGradient(
                     begin: Alignment.topCenter,
@@ -35,11 +35,11 @@ class EscritaTerapeutica extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text("Escrita Terapêutica",textAlign: MediaQuery.of(context).size.width < 750 ? TextAlign.justify : TextAlign.left, style: TextStyle(fontWeight: FontWeight.bold,fontSize: 24),),
+                          Text("Escrita Terapêutica",textAlign: MediaQuery.of(context).size.width < 750 ? TextAlign.justify : TextAlign.left, style: const TextStyle(fontWeight: FontWeight.bold,fontSize: 24),),
                         ],
                       ),
-                      SizedBox(height: 20),
-                      Text.rich(TextSpan(
+                      const SizedBox(height: 20),
+                      const Text.rich(TextSpan(
                         style: TextStyle(fontSize: 20),
                         children: <TextSpan>[
                           TextSpan(text: "Dedique alguns minutos para "),
@@ -49,17 +49,17 @@ class EscritaTerapeutica extends StatelessWidget {
 
                       )),
 
-                      SizedBox(height: 30,),
+                      const SizedBox(height: 30,),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
                           ElevatedButton(style: ButtonStyle(
-                            foregroundColor: MaterialStateProperty.all<Color>(Color.fromRGBO(255, 39, 118, 100)),
+                            foregroundColor: MaterialStateProperty.all<Color>(const Color.fromRGBO(255, 39, 118, 100)),
                             backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
-                            side: MaterialStateProperty.all<BorderSide>(BorderSide(color: Color.fromRGBO(255, 39, 118, 100))),
+                            side: MaterialStateProperty.all<BorderSide>(const BorderSide(color: Color.fromRGBO(255, 39, 118, 100))),
                           ),onPressed: () => {
-                            Navigator.push(context, MaterialPageRoute(builder: (context) => Agradecimento()))
-                          }, child: Text("Estou melhor, obrigado!")),
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => const Agradecimento()))
+                          }, child: const Text("Estou melhor, obrigado!")),
                         ],
                       ),
                     ],
@@ -68,7 +68,7 @@ class EscritaTerapeutica extends StatelessWidget {
               ),
               Align(alignment: Alignment.topCenter, child: Image(
                 alignment: Alignment.center,
-                image: AssetImage("assets/images/tecnicas_relaxamento.png"),
+                image: const AssetImage("assets/images/tecnicas_relaxamento.png"),
                 width: MediaQuery.of(context).size.width / 4,
                 height: MediaQuery.of(context).size.height / 3,))
             ]),

@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+import 'package:first_app/pages/reconhecimentofacial.dart';
 import 'package:flutter/material.dart';
 import 'package:first_app/pages/ola.dart';
 
@@ -47,7 +48,7 @@ class HomePage extends StatelessWidget {
                   backgroundColor: MaterialStateProperty.all<Color>(Color.fromRGBO(51, 51, 51, 100)),
                 ),
                 onPressed: () => {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => Ola()))
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => Reconhecimento()))
                 },
                 child: const Text("Acordar James!",
                   style: TextStyle(color: Colors.white)

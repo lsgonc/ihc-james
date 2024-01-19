@@ -9,7 +9,7 @@ class MapasMentais extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-            padding: EdgeInsets.fromLTRB(0, 30, 0, 0),
+            padding: const EdgeInsets.fromLTRB(0, 30, 0, 0),
             decoration: const BoxDecoration(
                 gradient: LinearGradient(
                     begin: Alignment.topCenter,
@@ -35,11 +35,11 @@ class MapasMentais extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text("Mapas Mentais",textAlign: MediaQuery.of(context).size.width < 750 ? TextAlign.justify : TextAlign.left, style: TextStyle(fontWeight: FontWeight.bold,fontSize: 24),),
+                          Text("Mapas Mentais",textAlign: MediaQuery.of(context).size.width < 750 ? TextAlign.justify : TextAlign.left, style: const TextStyle(fontWeight: FontWeight.bold,fontSize: 24),),
                         ],
                       ),
-                      SizedBox(height: 20),
-                      Text.rich(TextSpan(
+                      const SizedBox(height: 20),
+                      const Text.rich(TextSpan(
                         children: <TextSpan>[
                           TextSpan(text: "Comece com um ", style: TextStyle(fontSize: 20)),
                           TextSpan(text: "conceito central", style: TextStyle(fontSize: 20,color: Color.fromRGBO(55, 123, 255, 100))),
@@ -48,21 +48,21 @@ class MapasMentais extends StatelessWidget {
                           TextSpan(text: " conectando ideias através de linhas.", style: TextStyle(fontSize: 20)),
                         ]
                       )),
-                      SizedBox(height: 30,),
-                      Text(
+                      const SizedBox(height: 30,),
+                      const Text(
                         "Esse método facilita a revisão e a compreensão de relações entre diferentes conceitos.", 
                         style: TextStyle(fontSize: 20),),
-                      SizedBox(height: 30,),
+                      const SizedBox(height: 30,),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
                           ElevatedButton(style: ButtonStyle(
-                            foregroundColor: MaterialStateProperty.all<Color>(Color.fromRGBO(0, 96, 150, 100)),
+                            foregroundColor: MaterialStateProperty.all<Color>(const Color.fromRGBO(0, 96, 150, 100)),
                             backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
-                            side: MaterialStateProperty.all<BorderSide>(BorderSide(color: Color.fromRGBO(0, 96, 150, 100))),
+                            side: MaterialStateProperty.all<BorderSide>(const BorderSide(color: Color.fromRGBO(0, 96, 150, 100))),
                           ),onPressed: () => {
-                            Navigator.push(context, MaterialPageRoute(builder: (context) => Agradecimento()))
-                          }, child: Text("Estou melhor, obrigado")),
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => const Agradecimento()))
+                          }, child: const Text("Estou melhor, obrigado")),
                         ],
                       ),
                     ],
@@ -71,7 +71,7 @@ class MapasMentais extends StatelessWidget {
               ),
               Align(alignment: Alignment.topCenter, child: Image(
                 alignment: Alignment.center,
-                image: AssetImage("assets/images/metodo_pomodoro.png"),
+                image: const AssetImage("assets/images/metodo_pomodoro.png"),
                 width: MediaQuery.of(context).size.width / 4,
                 height: MediaQuery.of(context).size.height / 3,))
             ]),
