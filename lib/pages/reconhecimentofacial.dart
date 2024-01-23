@@ -54,7 +54,7 @@ class _ReconhecimentoState extends State<Reconhecimento> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: const Text("Official InAppWebView website")),
+        appBar: AppBar(title: const Text("IHC - JAMES")),
         body: SafeArea(
             child: Column(children: <Widget>[
           TextField(
@@ -64,7 +64,7 @@ class _ReconhecimentoState extends State<Reconhecimento> {
             onSubmitted: (value) {
               var url = WebUri(value);
               if (url.scheme.isEmpty) {
-                url = WebUri("https://morphcast-api.onrender.com/");
+                url = WebUri("https://morphcastapi-server.vercel.app/");
               }
               webViewController?.loadUrl(urlRequest: URLRequest(url: url));
             },
@@ -75,7 +75,7 @@ class _ReconhecimentoState extends State<Reconhecimento> {
                 InAppWebView(
                   key: webViewKey,
                   initialUrlRequest: URLRequest(
-                      url: WebUri("https://morphcast-api.onrender.com/")),
+                      url: WebUri("https://morphcastapi-server.vercel.app/")),
                   initialSettings: settings,
                   pullToRefreshController: pullToRefreshController,
                   onWebViewCreated: (controller) {
