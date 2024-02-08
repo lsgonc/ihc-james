@@ -64,7 +64,7 @@ class _PiadaState extends State<Piada> {
                                     height: 1.5,
                                     fontFamily: 'Roboto',
                                     fontSize: 20))
-                            : Text(""),
+                            : Text("Clique no botão para eu contar uma piada!"),
                         piada != null
                             ? Text(piada!.delivery,
                                 style: TextStyle(

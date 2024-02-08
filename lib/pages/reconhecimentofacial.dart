@@ -1,5 +1,6 @@
 import 'package:first_app/pages/ola.dart';
 import 'package:first_app/pages/piada.dart';
+import 'package:first_app/pages/trocando_pagina.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
@@ -90,12 +91,12 @@ class _ReconhecimentoState extends State<Reconhecimento> {
                             Navigator.pushReplacement(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => const Ola()));
+                                    builder: (context) => SplashScreen(emocao: message,)));
                           } else {
                             Navigator.pushReplacement(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => const Piada()));
+                                    builder: (context) => SplashScreen(emocao: message,)));
                           }
                         });
                     webViewController = controller;

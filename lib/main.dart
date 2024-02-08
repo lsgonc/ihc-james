@@ -2,9 +2,12 @@ import 'package:first_app/pages/home.dart';
 import 'package:first_app/pages/reconhecimentofacial.dart';
 import 'package:flutter/material.dart';
 import 'package:permission_handler/permission_handler.dart';
+import 'package:first_app/services/face_service.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  sendFace();
 
   runApp(const MyApp());
 }
