@@ -7,7 +7,7 @@ import 'package:first_app/services/face_service.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  sendFace();
+  sendFace("http://192.168.1.100:5000/led/changeExpression/9");
 
   runApp(const MyApp());
 }

@@ -37,20 +37,11 @@ class _SplashScreenState extends State<SplashScreen> {
         widget.emocao == "Fear" ||
         widget.emocao == "Sad") {
       Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(
-              builder: (context) => const Ola()));
+          context, MaterialPageRoute(builder: (context) => const Ola()));
     } else {
       Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(
-              builder: (context) => const Piada()));
+          context, MaterialPageRoute(builder: (context) => const Piada()));
     }
-  }
-
-  route2() {
-    Navigator.pushReplacement(
-        context, MaterialPageRoute(builder: (context) => const Piada()));
   }
 
   initScreen(BuildContext context) {
@@ -65,7 +56,10 @@ class _SplashScreenState extends State<SplashScreen> {
             const Padding(padding: EdgeInsets.only(top: 20.0)),
             const Text(
               "James está processando suas emoções!",
-              style: TextStyle(fontSize: 24.0,fontWeight: FontWeight.bold,  color: Colors.black),
+              style: TextStyle(
+                  fontSize: 24.0,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black),
             ),
             const Padding(padding: EdgeInsets.only(top: 20.0)),
             const CircularProgressIndicator(

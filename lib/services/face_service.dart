@@ -1,11 +1,10 @@
 import 'package:http/http.dart' as http;
 
-Future<void> sendFace() async {
-  const url = "http://192.168.1.100:5000/led/changeExpression/9";
-
+Future<void> sendFace(String url) async {
   final response = await http.get(Uri.parse(url));
 
   if (response.statusCode != 200) {
+    print(response.body);
     throw Exception("Api call não funcionou");
   }
 }
