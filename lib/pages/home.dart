@@ -32,7 +32,7 @@ class HomePage extends StatelessWidget {
                   style: TextStyle(fontSize: 24, fontWeight: FontWeight.normal,height: 1.5, color: Color.fromRGBO(51, 51, 51, 100)),
                   children: <TextSpan>[
                     TextSpan(text: "Olá, meu nome é "),
-                    TextSpan(text: "James!", style: TextStyle(color: Color.fromRGBO(0, 96, 150, 100))),
+                    TextSpan(text: "James", style: TextStyle(color: Color.fromRGBO(0, 96, 150, 100))),
                     TextSpan(text: ", gostaria de conversar?")
                   ]
                 ),

@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:first_app/pages/ola.dart';
 import 'package:first_app/pages/piada.dart';
 import 'package:first_app/pages/trocando_pagina.dart';
@@ -91,21 +93,23 @@ class _ReconhecimentoState extends State<Reconhecimento> {
                               message == "Sad") {
                             super.dispose();
                             controller.dispose();
-                            Navigator.pushReplacement(
+                            Timer(const Duration(seconds: 5), () => Navigator.pushReplacement(
                                 context,
                                 MaterialPageRoute(
                                     builder: (context) => SplashScreen(
                                           emocao: message,
-                                        )));
+                                        )))
+                            );
                           } else {
                             super.dispose();
                             controller.dispose();
-                            Navigator.pushReplacement(
+                            Timer(const Duration(seconds: 5), () => Navigator.pushReplacement(
                                 context,
                                 MaterialPageRoute(
                                     builder: (context) => SplashScreen(
                                           emocao: message,
-                                        )));
+                                        )))
+                            );
                           }
                         });
                     webViewController = controller;
@@ -239,4 +243,6 @@ class _ReconhecimentoState extends State<Reconhecimento> {
           ),
         ])));
   }
+
+  void delay() {}
 }
